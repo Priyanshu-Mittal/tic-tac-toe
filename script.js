@@ -4,6 +4,17 @@ const human='O';
 const ai='X';
 const cells=document.querySelectorAll('.cell');
 playGame();
+function toggleMusic(){
+	var music=document.getElementById('myAudio');
+	if(music.paused){
+		music.play();
+		document.getElementById('musicImg').src="musicOn.png";
+	}
+	else{
+		music.pause();
+		document.getElementById('musicImg').src="musicOff.png";
+	}
+}
 function playGame(){
 	board=Array.from(Array(9).keys());
 	document.querySelector(".endgame").style.display="none";
