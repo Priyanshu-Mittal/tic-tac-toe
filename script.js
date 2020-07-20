@@ -45,7 +45,7 @@ function checkWin(tboard,player){
 	let gameWon=null;
 	for(var ind=0;ind<wincombo.length;ind++){
 		let i=wincombo[ind][0],j=wincombo[ind][1],k=wincombo[ind][2];
-		if( (tboard[i]==player) && (tboard[i]==tboard[j]) && (tboard[j]==tboard[k]) ){
+		if( (tboard[i]===player) && (tboard[i]==tboard[j]) && (tboard[j]==tboard[k]) ){
 			gameWon={index:ind,winner:player};
 			break;
 		}
